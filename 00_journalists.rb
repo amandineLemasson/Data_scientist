@@ -3,86 +3,86 @@ handle = ["@jcunniet","@PaulLampon","@Aziliz31","@ssoumier","@marionsouzeau","@g
 
 #------------------------------------------------------------------------
 
-def questions_1(handle)
+def number_1(handle)
 	puts "Combien y a-t-il de journalistes dans ce array ? "
 	puts handle.count
 end #379
 
-questions_1(handle)
+number_1(handle)
 
 #------------------------------------------------------------------------
 
-def questions_2(handle)
+def number_2(handle)
 puts "Combien d'handle contiennent un numéro ?"
 puts handle.grep(/[0-9]/).count
 end #17
 
-questions_2(handle)
+number_2(handle)
 
 #------------------------------------------------------------------------
 
-def questions_3(handle)
+def number_3(handle)
 puts "Combien d'handle contiennent les 4 lettres du prénom Aude à la suite (sans prendre en compte les majuscules) ? "
 handle_words = handle.to_s
 handle_downcase = handle_words.downcase
 puts handle_downcase.scan(/aude/).length
 end #3
 
-questions_3(handle)
+number_3(handle)
 
 #------------------------------------------------------------------------
 
-def questions_4(handle)
+def number_4(handle)
 puts "Combien commencent par une majuscule (première lettre juste après le @) ?"
 puts handle.grep(/^@[A-Z]/).count
 end #209
 
-questions_4(handle)
+number_4(handle)
 
 #------------------------------------------------------------------------
 
-def questions_5(handle)
+def number_5(handle)
 puts "Combien contiennent au moins une majuscule ?"
 puts handle.grep(/[A-Z]/).count
 end #215
 
-questions_5(handle)
+number_5(handle)
 
 #------------------------------------------------------------------------
 
-def questions_6(handle)
+def number_6(handle)
 puts "Combien y a-t-il de underscore _ dans tous les pseudos confondus ?"
 handle_words = handle.to_s
 puts handle_words.scan(/_/).length
 end #75
 
-questions_6(handle)
+number_6(handle)
 
 #------------------------------------------------------------------------
 
-def questions_7(handle)
+def number_7(handle)
 puts "Trie la liste de handle par ordre alphabétique."
 puts handle.sort{|a,b| a <=> b }
 end
 
-questions_7(handle)
+number_7(handle)
 
 #------------------------------------------------------------------------
 
-def questions_8(handle)
+def number_8(handle)
 puts "Quels sont les 50 handles les plus courts de ce array ?"
 handle_size = handle.sort_by(&:length)
 puts handle_size[0..49]
 end
 
-questions_8(handle)
+number_8(handle)
 
 #------------------------------------------------------------------------
 
-def questions_9(handle)
+def number_9(handle)
 puts "Quelle est la position dans l'array de la personne @epenser ?"
 puts handle.index("@epenser") 
 end #371
 
-questions_9(handle)
+number_9(handle)
 
